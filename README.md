@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/banner.png" alt="SubsForge" width="100%">
-</p>
-
 <div align="center">
 
 # SubsForge
@@ -14,9 +10,9 @@
 [![Python](https://img.shields.io/badge/Python-sidecar-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![FFmpeg](https://img.shields.io/badge/FFmpeg-required-007808?logo=ffmpeg&logoColor=white)](https://ffmpeg.org)
 
-</div>
+<img src="assets/screenshot.png" alt="SubsForge" width="880" />
 
-![SubsForge screenshot](assets/screenshot.png)
+</div>
 
 ## Features
 
@@ -36,9 +32,9 @@ SubsForge uses a robust three-layer design communicating over **IPC (Inter-Proce
 
 ```mermaid
 flowchart LR
-    UI["Frontend<br/>(HTML/JS)"] -->|Events| Tauri["Tauri Middleware<br/>(Rust)"]
-    Tauri -->|Spawn thread| Sidecar["AI Sidecar<br/>(Python)"]
-    Sidecar -->|stdout (term-line)| Tauri
+    UI["Frontend<br/>HTML/JS"] -->|Events| Tauri["Tauri Middleware<br/>Rust"]
+    Tauri -->|Spawn thread| Sidecar["AI Sidecar<br/>Python"]
+    Sidecar -->|stdout term-line| Tauri
     Sidecar --> Whisper["faster-whisper"]
     Sidecar --> Sync["ffsubsync / FFmpeg"]
 ```
