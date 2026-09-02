@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SubsForge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./brand.css" />
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="bg"><div class="bg-blob" id="blob"></div></div>
+
+
+
+<div class="app" id="app">
+
+  <!-- ─── Sidebar ─────────────────────────────────────── -->
+  <aside class="sidebar">
+    <div class="brand" data-tauri-drag-region>
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 256 256" fill="currentColor">
+          <path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,144H32V64H224V192ZM118.92,151.71A8,8,0,0,1,116,162.64a40,40,0,1,1,0-69.28,8,8,0,1,1-8,13.85,24,24,0,1,0,0,41.58A8,8,0,0,1,118.92,151.71Zm80,0A8,8,0,0,1,196,162.64a40,40,0,1,1,0-69.28,8,8,0,1,1-8,13.85,24,24,0,1,0,0,41.58A8,8,0,0,1,198.92,151.71Z"/>
+        </svg>
+      </span>
+      <span class="brand-text">Subs<span class="gr">Forge</span></span>
+      <button class="collapse-btn" id="btn-toggle-sidebar" title="Plegar barra" aria-label="Toggle sidebar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transition: transform var(--t-fast);">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-section">
+        <div class="nav-section-label" data-i18n="sec_tools">Herramientas</div>
+        <div id="nav">
+          <!-- Renderizado dinámico desde main.js -->
+        </div>
+      </div>
+    </nav>
+    <div class="sidebar-foot">
+      <span class="app-version" id="app-version">v4.0</span>
+    </div>
+  </aside>
+
+  <!-- ─── Columna principal ───────────────────────────── -->
+  <div class="main-col">
+    <header class="topbar" data-tauri-drag-region>
+      <div class="topbar-left">
+      </div>
+
+      <div class="topbar-right">
+        <button class="icon-btn" id="btn-theme" title="Cambiar tema claro / oscuro" aria-label="Tema"></button>
+        <button class="lang-btn" id="btn-lang" title="Cambiar idioma">ES</button>
+        <a class="icon-btn" id="link-portfolio" href="#" title="Portfolio">
+          <svg viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+        </a>
+        <a class="icon-btn" id="link-github" href="#" title="GitHub">
+          <svg viewBox="0 0 256 256" fill="currentColor"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"/></svg>
+        </a>
+      </div>
+
+      <div class="win-controls">
+        <button class="win-btn" id="win-min" title="Minimizar" aria-label="Minimizar">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><line x1="2" y1="6" x2="10" y2="6"/></svg>
+        </button>
+        <button class="win-btn" id="win-max" title="Maximizar" aria-label="Maximizar">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2.5" y="2.5" width="7" height="7" rx="1"/></svg>
+        </button>
+        <button class="win-btn close" id="win-close" title="Cerrar" aria-label="Cerrar">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 3l6 6M9 3l-6 6"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="content">
+        <!-- Renderizado dinámico de la pestaña activa -->
+        <div id="tab-content-container" class="tab-content active"></div>
+      </div>
+
+      <!-- Consola: barra inferior acoplada -->
+      <div class="term collapsed" id="console-drawer">
+        <div class="term-head" id="console-toggle">
+          <svg class="term-ico" viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM104,120a8,8,0,0,1-2.34,5.66l-24,24a8,8,0,0,1-11.32-11.32L86.69,120,66.34,99.66a8,8,0,0,1,11.32-11.32l24,24A8,8,0,0,1,104,120Zm72,32a8,8,0,0,1-8,8H136a8,8,0,0,1,0-16h32A8,8,0,0,1,176,152Z"/></svg>
+          <span class="term-title" id="term-title">Consola</span>
+          <span class="term-caret">▾</span>
+        </div>
+        <div class="term-body" id="logs">
+          <span class="prompt">$ </span><span id="console-idle">Sistema en línea. Esperando órdenes...</span><br/>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="./main.js"></script>
+<script>
+  // Halo que sigue el ratón (mismo patrón que SubsForge y OrquestaGit): transform en GPU
+  const blob = document.getElementById('blob');
+  let _bx = innerWidth * 0.6, _by = innerHeight * 0.4, _bq = false;
+  function paintBlob() {
+    _bq = false;
+    if (blob) blob.style.transform = `translate3d(${_bx}px,${_by}px,0) translate(-50%,-50%)`;
+  }
+  window.addEventListener('pointermove', (e) => {
+    _bx = e.clientX; _by = e.clientY;
+    if (!_bq) { _bq = true; requestAnimationFrame(paintBlob); }
+  }, { passive: true });
+  paintBlob();
+  
+  // Prevenir navegación por arrastre de archivos
+  ['dragover', 'drop'].forEach(ev => window.addEventListener(ev, e => e.preventDefault()));
+</script>
+</body>
+</html>
+
+
+
+
+

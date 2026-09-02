@@ -1,0 +1,39 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+*.log
+autosubs.log
+
+# Entornos virtuales (por si acaso los crean)
+venv/
+env/
+.venv/
+
+# Archivos temporales de sistema
+.DS_Store
+Thumbs.db
+
+# Subtítulos y vídeos residuales de pruebas
+*.mkv
+*.mp4
+*.avi
+*.srt
+
+# Coordinacion interna de la migracion (no publicar en el repo)
+migracion_tauri.log
+docs/CONTRATO_TAURI.md
+docs/AMPLIACION_TOOLS.md
+Basura/
+*.bak
+src-tauri/target/
+*.pyc
+dist/
+node_modules/
+.env
+.env.*
+
+# Compiled sidecar binaries (build output, regenerated with PyInstaller — see docs/BUILD.md)
+src-tauri/binaries/

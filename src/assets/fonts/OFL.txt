@@ -1,0 +1,6 @@
+The bundled fonts are licensed under the SIL Open Font License 1.1:
+  - Space Grotesk   (c) Florian Karsten
+  - Inter           (c) The Inter Project Authors
+  - JetBrains Mono  (c) JetBrains
+Full license text: https://openfontlicense.org
+These fonts may be bundled and redistributed with this application.

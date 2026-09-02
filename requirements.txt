@@ -1,0 +1,13 @@
+# --- AutoSubs Pro · interfaz web (PyWebView) ---
+pywebview>=5.0
+requests>=2.31.0
+
+# --- Motores de subtítulos ---
+faster-whisper>=1.0.0
+ffsubsync>=0.5.0
+deep-translator>=1.11.4
+pysrt>=1.1.2
+
+# --- Interfaz antigua tkinter (opcional, legacy: src/main.py) ---
+# customtkinter>=5.2.0
+# Pillow>=10.0.0
