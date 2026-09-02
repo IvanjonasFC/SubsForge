@@ -37,3 +37,7 @@ node_modules/
 
 # Compiled sidecar binaries (build output, regenerated with PyInstaller — see docs/BUILD.md)
 src-tauri/binaries/
+
+# ---- Helpers locales de Windows (NO se publican) ----
+# El build esta documentado en el README / docs. Los .bat son de conveniencia local.
+*.bat

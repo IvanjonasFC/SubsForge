@@ -515,3 +515,12 @@ main { flex: 1; overflow: hidden; display: flex; flex-direction: column; positio
   --glow-1:rgba(224,130,79,.055); --glow-2:rgba(224,130,79,.028);
   --card-bg:rgba(252,248,241,.70); --card-bg-hover:rgba(255,255,255,.88);
 }
+
+/* ============================================================
+   BRAND KIT v8 — SubsForge: tema claro más legible (coherente con la marca)
+   ============================================================ */
+:root[data-theme="light"]{
+  --fg-1:#413A31;
+  --fg-2:#655C50;
+  --fg-3:#8B806F;
+}
