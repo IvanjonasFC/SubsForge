@@ -1,6 +1,6 @@
 # --- AutoSubs Pro · interfaz web (PyWebView) ---
 pywebview>=5.0
-requests>=2.31.0
+requests>=2.34.2
 
 # --- Motores de subtítulos ---
 faster-whisper>=1.0.0
