@@ -3,7 +3,7 @@ pywebview>=5.0
 requests>=2.31.0
 
 # --- Motores de subtítulos ---
-faster-whisper>=1.0.0
+faster-whisper>=1.2.1
 ffsubsync>=0.5.0
 deep-translator>=1.11.4
 pysrt>=1.1.2
